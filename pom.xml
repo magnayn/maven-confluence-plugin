@@ -20,7 +20,7 @@ limitations under the License.
 
 	<groupId>com.fibon.maven.plugins</groupId>
 	<artifactId>maven-confluence-plugin</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1-rt</version>
 	<packaging>maven-plugin</packaging>
 
 	<name>Maven Confluence Plugin</name>
@@ -211,5 +211,18 @@ limitations under the License.
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+    <repository>
+      <id>release</id>
+      <name>Central Repository</name>
+      <url>http://nexus.internal.realtimehealth.net:8081/nexus/content/repositories/thirdparty</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshot</id>
+      <name>Central Development Repository</name>
+      <url>http://nexus.internal.realtimehealth.net:8081/nexus/content/repositories/thirdparty-snapshots</url>
+    </snapshotRepository>
+    </distributionManagement>
 
 </project>
